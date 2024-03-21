@@ -1,14 +1,18 @@
-import numpy
 import os
+import random
 
 CONST_ASCII_TO_INDEX = 65
+
+randomPhrases = ["Go Out On a Limb", "Don't Look a Gift Horse In The Mouth", 
+"It's Not Rocket Science", "Break The Ice", "Antidisestablishmentarianism", 
+"Needle In a Haystack", "Go Out On a Limb", "Check Out My Website: aidangamble.github.io"]
 
 #   Initializes game, including secret phrase, foundLetters,
 #   and alreadyGuessed arrays. Also prints the initial blank
 #   phrase.
 
 def initializeGame():
-    phrase = "THIS IS SOMEONE'S TEST"
+    phrase = random.choice(randomPhrases)
     phrase = intro(phrase).upper()
     os.system("cls")
 
